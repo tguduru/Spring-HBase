@@ -6,7 +6,6 @@ package org.bigdata.hbase.spring.util;
 import org.apache.thrift.TBase;
 import org.apache.thrift.TDeserializer;
 import org.apache.thrift.TException;
-import org.apache.thrift.TFieldIdEnum;
 import org.apache.thrift.TSerializer;
 import org.apache.thrift.protocol.TCompactProtocol;
 
@@ -20,9 +19,9 @@ public class SerializationUtil {
      * @param args
      */
     public static void main(String[] args) {
-	
+
     }
-	
+
 
     public static byte [] serialize(TBase<?, ?> object) throws TException{
 	TSerializer serializer = new TSerializer(new TCompactProtocol.Factory());

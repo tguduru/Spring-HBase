@@ -1,14 +1,9 @@
-/**
- * 
- */
 package org.bigdata.hbase.spring;
 
 import java.io.IOException;
-import java.util.Date;
 
 import org.apache.hadoop.hbase.HColumnDescriptor;
 import org.apache.hadoop.hbase.HTableDescriptor;
-import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.client.Get;
 import org.apache.hadoop.hbase.client.HBaseAdmin;
 import org.apache.hadoop.hbase.client.HTableInterface;
@@ -63,7 +58,7 @@ public class HBaseConnection {
 		return user;
 	    }
 	});
-	
+
     }
 
     /**
@@ -73,7 +68,7 @@ public class HBaseConnection {
 	hbaseTemplate.execute(tableName, new TableCallback<User>() {
 
 	    public User doInTable(HTableInterface table) throws Throwable {
-		
+
 		User user = new User();
 		user.setFirstName("THIRUPATHI REDDY");
 		user.setLastName("GUDURU");
@@ -87,7 +82,7 @@ public class HBaseConnection {
 		return user;
 	    }
 	});
-	
+
     }
 
     public void createTable(HBaseAdmin admin) throws IOException{
